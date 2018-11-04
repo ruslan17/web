@@ -1,0 +1,80 @@
+p {
+     color: brown;
+     font-family: "DejaVu Sans";
+ }
+
+body {
+    background-color: cyan;
+}
+
+#image {
+    width: 50%;
+}
+
+h2 {
+    /*color: red;*/
+    color: #ff0000;
+    /*color: rgb(255, 99, 71);*/
+    /*color: rgb(10, 150, 150);*/
+}
+
+.header-title {
+    color: #00ffff;
+    text-align: center;
+    /*background-color: brown;*/
+}
+
+p.header-title {
+    text-align: right;
+}
+
+#header-title-id {
+    color: #a52a2a;
+}
+
+.block-1 {
+    font-size: 1.5em;
+    background-color: brown;
+}
+
+.block-2 {
+    font-size: 1.5em;
+}
+
+.important-block {
+    background-color: aquamarine !important;
+}
+
+#justify-example {
+    /*text-align: justify;*/
+    font-weight: 800;
+}
+
+.base-div {
+    height: 250px;
+}
+
+.div-1 {
+    width: 30%;
+    height: 200px;
+    background-color: brown;
+    /*float: left;*/
+    margin: 15px;
+    margin-bottom: 25px;
+    padding: 10px;
+    border: 10px solid black;
+}
+
+.div-2 {
+    width: 40%;
+    height: 200px;
+    background-color: blueviolet;
+    /*float: right;*/
+}
+
+.child {
+    width: 40%;
+    height: 200px;
+    display: inline-block;
+
+}

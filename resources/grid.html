@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        body {
+            margin: 0px;
+        }
+        .container {
+            display: grid;
+        }
+        .container > div {
+            /*color: white;*/
+            background-color: #bbbbbb;
+            text-align: center;
+        }
+        .header {
+            height: 100px;
+            margin: 5px;
+
+            grid-column-start: 1;
+            grid-column-end: 6;
+        }
+        .menu {
+            height: 300px;
+            margin-left: 5px;
+            margin-right: 5px;
+
+        }
+        .content {
+            height: 300px;
+            margin-right: 5px;
+
+            grid-column-start: 2;
+            grid-column-end: 6;
+        }
+        .footer {
+            height: 100px;
+            grid-column-start: 1;
+            grid-column-end: 6;
+            margin: 5px;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .menu {
+                grid-column-start: 1;
+                grid-column-end: 6;
+                margin-bottom: 5px;
+            }
+            .content {
+                margin-left: 5px;
+                grid-column-start: 1;
+                grid-column-end: 6;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">HEADER</div>
+    <div class="menu">MENU</div>
+    <div class="content">CONTENT</div>
+    <div class="footer">FOOTER</div>
+</div>
+
+</body>
+</html>

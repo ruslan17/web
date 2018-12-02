@@ -1,0 +1,23 @@
+#header {
+    height: 50px;
+    width: 100%;
+    background-color: blue;
+}
+
+.user-div {
+    width: 25%;
+    background-color: #bbbbbb;
+}
+
+.user-div > h6 {
+    background-color: brown;
+    padding: 10px;
+}
+
+.user-div > p {
+    padding: 5px;
+}
+
+#save-user {
+    margin: 10px;
+}

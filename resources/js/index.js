@@ -20,7 +20,21 @@ function consoleLog() {
     console.log(string.length);
 }
 
+function testForIn() {
+    let menu = {
+        width: 300,
+        height: 200,
+        title: "Menu"
+    };
+    let value = 300;
+
+    for (value in menu) {
+        alert("!!!!!!!")
+    }
+}
 function objectExample() {
+
+
     // let object = new Object();
     let object = {};
 

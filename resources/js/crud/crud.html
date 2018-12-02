@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CRUD</title>
+    <script src="crud.js"></script>
+    <link rel="stylesheet" href="crud.css">
+</head>
+<body>
+
+<div id="header"></div>
+
+<button type="button" onclick="getUser()">GET USER</button>
+<button type="button" onclick="getAllUsers()">GET ALL</button>
+
+<div id="save-user">
+    <input type="text" placeholder="Input user id" id="save-id">
+    <input type="text" placeholder="Input user name" id="save-name">
+    <input type="text" placeholder="Input user age" id="save-age">
+    <button type="button" onclick="saveUser()">SAVE USER</button>
+    <button type="button" onclick="updateUser()">UPDATE USER</button>
+</div>
+
+<div id="delete-user">
+    <input type="text"
+           placeholder="Input user id for delete"
+           id="delete-id">
+    <button type="button"
+            id="delete_user_button">DELETE USER</button>
+</div>
+
+<script>
+    document.getElementById("delete_user_button").onclick = deleteUser;
+
+</script>
+</body>
+</html>

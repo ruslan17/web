@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <input type="text" placeholder="Enter name"
+           id="name-input">
+    <button type="button" id="get"
+            onclick="getTextFromInput()">CLICK</button>
+</div>
+
+<script>
+
+    // let element = document.getElementById("get");
+    function getTextFromInput() {
+        let element = document.getElementById("name-input").value;
+        console.log(element);
+    }
+
+</script>
+
+</body>
+</html>

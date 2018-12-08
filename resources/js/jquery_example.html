@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+
+<button id="save_button">POST</button>
+
+<script>
+    let baseUrl = "https://reqres.in/api/";
+
+    $('#save_button').click(function () {
+        $.ajax({
+            url: baseUrl + "users",
+            dataType: 'json',
+            method: "POST",
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            data: JSON.stringify({
+                name: 'John',
+                job: "Programmer"
+            }),
+            success: function (response) {
+                console.log(response);
+            },
+            error: function (xhr, status, err) {
+                console.error(status, err.toString());
+            }
+        })
+    });
+
+    // После загрузки документа
+    // $(function() одно и тоже
+    $(document).ready(function(){
+
+    });
+
+</script>
+
+</body>
+</html>

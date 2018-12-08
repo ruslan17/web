@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="crud/crud.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        let users = [
+            {
+                id: 1,
+                name: "John",
+                age: 25
+            }, {
+                id: 2,
+                name: "Ilkin",
+                age: 20
+            }, {
+                id: 3,
+                name: "Nigar",
+                age: 17
+            }, {
+                id: 4,
+                name: "Ali",
+                age: 20
+            }
+        ];
+    </script>
+</head>
+<body>
+
+<div id="delete-user">
+    <input type="text"
+           placeholder="Input user id for delete"
+           id="delete-id">
+    <button type="button"
+            id="delete_user_button">DELETE USER
+    </button>
+</div>
+
+<script>
+    $(function () {
+        users.forEach(function (user, i, array) {
+            $('body').append(
+                "<div class='user-div' " + "id='" + user.id + "'>" +
+                '<h6>Name:</h6>' +
+                '<p>' + user.name + '</p>' +
+                '<h6>Age:</h6>' +
+                '<p>' + user.age + '</p>' +
+                "</div>");
+        })
+    })
+</script>
+
+</body>
+</html>

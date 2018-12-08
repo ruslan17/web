@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fetch</title>
+</head>
+<body>
+
+<button onclick="getUser()">GET USER</button>
+
+<button onclick="postUser()">POST</button>
+
+<script>
+    let baseUrl = "https://reqres.in/api/";
+    let users = {};
+    function getUser() {
+
+        fetch(baseUrl + 'users?page=2')
+            .then(function (response) {
+                response.json()
+                    .then(function (usersObject) {
+                        users = usersObject.data;
+                    })
+            }).then(print);
+
+    }
+
+    function print() {
+        console.log(users);
+    }
+</script>
+
+<script>
+    function postUser() {
+        fetch(baseUrl + 'users', {
+            method: "POST",
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                name: 'John',
+                job: "Programmer"
+            })
+        }).then(function (response) {
+            response.json()
+                .then(function (usersObject) {
+                    console.log(usersObject)
+                })
+        })
+    }
+</script>
+
+</body>
+</html>
